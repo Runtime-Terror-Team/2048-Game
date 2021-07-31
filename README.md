@@ -3,11 +3,11 @@
 > Make sure you have nodejs installed on your machine.
 
 ## How can you contribute?
-1.
+1. Clone the the Repo in your local
 ```shell
     git clone https://github.com/Runtime-Terror-Team/2048-Game.git
 ```
-2.
+2. Install project dependency
 ```shell
     npm install
 ```
