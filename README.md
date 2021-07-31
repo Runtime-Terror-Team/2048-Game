@@ -12,4 +12,20 @@
     npm install
 ```
 
+## Basic structure of the project repository 📂
+
+```terminal
+|
+|- public             # Any files within this directory will not be processed by Webpack but copied directly to the build folder.
+|- src:               # Contains all source code for the React application.
+    |
+    |- assets         # Contains icons and helper functions.
+        |- image      # all image store here
+        |- video      # all videos store here  
+    |- components     # Contains all the components used within the app.
+    |- styles         # Contains sass or css files.
+    |- App.js
+    |- index.js
+```
+
 
