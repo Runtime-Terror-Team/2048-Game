@@ -11,7 +11,7 @@ function BoardView() {
 
     // for store highScore and update highScore
     const [highScroe, setHighScore] = useState(board.score)
-    board.fourProbability = 1
+    // board.fourProbability = 1
 
     // initially check have any local HighScore
     useEffect(() => {
@@ -105,10 +105,6 @@ function BoardView() {
                         <div>{highScroe}</div>
 
                 </div>
-
-
-
-
             </div>
             <div className='resetButton' onClick={resetGame}>New Game</div>
             <div className='board'>

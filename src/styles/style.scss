@@ -1,8 +1,9 @@
-@font-face {
-  font-family: "Clear Sans";
-  src: url(../clear-sans.ttf) format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
+*{
+  font-family: 'Chewy', cursive;
+
+}
 body {
   display: flex;
   background-color: #57407c;
@@ -10,8 +11,9 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  font-family: "Clear Sans", sans-serif;
+  //font-family: "Clear Sans", sans-serif;
   font-size: 21px;
+
 }
 
 .text {
@@ -43,12 +45,13 @@ body {
   align-items: center;
   padding: 10px;
   justify-content: space-between;
-  h1{
+
+  h1 {
     font-size: 4rem;
     padding: 0;
     margin: 0;
-    /* margin-right: 10%; */
     width: 50%;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -59,9 +62,11 @@ body {
   font-size: 25px;
   padding: 10px 20px;
   border-radius: 7px;
+  text-align: center;
   margin-left: 63%;
   width: 27%;
   transition: color 0.3s ease, background-color 0.3s ease;
+
   &:hover {
     background-color: #d3386a;
     color: rgba(255, 255, 255, 1);
@@ -69,7 +74,7 @@ body {
 }
 
 .score-header {
-  font-size: 50%;
+  font-size: 1.2rem;
 }
 
 .score-box {
@@ -79,7 +84,7 @@ body {
   //width: 70px;
   padding: 5px 15px;
   border-radius: 7px;
-  width: 25%;
+  width: 35%;
   margin-left: 10px;
 }
 
@@ -236,8 +241,12 @@ body {
 }
 
 .gameOver {
-  background-size: contain;
-  background-image: url(../assets/img/game-over.gif);
+  //background-size: contain;
+  //background-image: url(../assets/img/game-over.gif);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -245,13 +254,58 @@ body {
   left: 0;
   z-index: 100;
   text-align: center;
+  background: rgba(87, 64, 124, .51);
+
+  h1 {
+    font-size: 4.5rem;
+    color: red;
+    word-spacing: 3px;
+    animation: light 4s ease-in-out infinite;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 1.8rem;
+    color: gold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: try-again-btn 2s ease-in-out infinite;
+    background-color: rgba(65, 105, 225, 0.26);
+  }
+}
+
+@keyframes light {
+  0% {
+    text-shadow: 0 0 1px rgba(11, 8, 255, 0);
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(11, 8, 255, .5);
+  }
+  100% {
+    text-shadow: 0 0 1px rgb(11, 8, 255);
+  }
+}
+
+@keyframes try-again-btn {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 .overlay .message {
   color: #666;
 }
 
-.score-addition{
+.score-addition {
   position: absolute;
   z-index: 1;
   top: 0;
