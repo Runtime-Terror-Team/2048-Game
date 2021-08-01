@@ -11,6 +11,7 @@ function BoardView() {
 
     // for store highScore and update highScore
     const [highScroe, setHighScore] = useState(board.score)
+    board.fourProbability = 1
 
     // initially check have any local HighScore
     useEffect(() => {
@@ -77,23 +78,39 @@ function BoardView() {
     const resetGame = () => {
         setBoard(new Board())
     }
+    const [toggle, setToggle] = useState(false)
+
+    useEffect(() => {
+        setToggle(true)
+        setTimeout(() => {
+            setToggle(false)
+        }, 600)
+
+    }, [board.score])
 
     return (
         <div>
             <div className="details-box">
-                <div className='resetButton' onClick={resetGame}>New Game</div>
 
-                <div className='score-box'>
-                    <div className='score-header'>Score</div>
-                    <div>{board.score}</div>
+                    <h1>2048</h1>
+                    <div className='score-box'>
+                        <div className='score-header'>Score</div>
+                        <div>{board.score}</div>
+                        {toggle
+                        && <div className="score-addition">+{board.score - board.preScore}</div>
+                        }
+                    </div>
+                    <div className='score-box'>
+                        <div className='score-header'>Highest Score</div>
+                        <div>{highScroe}</div>
+
                 </div>
 
-                <div className='score-box'>
-                    <div className='score-header'>Highest Score</div>
-                    <div>{highScroe}</div>
-                </div>
+
+
 
             </div>
+            <div className='resetButton' onClick={resetGame}>New Game</div>
             <div className='board'>
                 {cells}
                 {tiles}

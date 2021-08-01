@@ -66,6 +66,7 @@ class Board {
         this.cells = [];
         this.score = 0;
         this.size = 4;
+        this.preScore = 0
         this.fourProbability = 0.1;
         this.deltaX = [-1, 0, 1, 0];
         this.deltaY = [0, -1, 0, 1];
@@ -105,6 +106,7 @@ class Board {
                     let tile2 = currentRow.shift();
                     tile2.mergedInto = targetTile;
                     targetTile.value += tile2.value;
+                    this.preScore = this.score
                     this.score += tile1.value + tile2.value;
                 }
                 resultRow[target] = targetTile;
