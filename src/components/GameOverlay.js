@@ -1,23 +1,24 @@
 import React from 'react';
-// import TryAgainLogo from '../assets/img/try-again.gif'
 
 function GameOverlay({ onRestart, board }) {
     if (board.hasWon()) {
         return <div className='tile2048'/>
     } else {
-        return <div className='gameOver' >
-                <h1>Game Over!</h1>
-            <button onClick={onRestart}>Try agin</button>
-            {/*<img*/}
-            {/*    src={TryAgainLogo}*/}
-            {/*    alt="TryAgainLogo"*/}
-            {/*    style={{*/}
-            {/*        width: '100%',*/}
-            {/*        height: '100%',*/}
-            {/*        cursor: "pointer"*/}
-            {/*    }*/}
-            {/*    }/>*/}
-        </div>
+        return (
+            <div className='gameOver'>
+                <div className="logo is-animetion">
+                    <span>G</span>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>e</span>
+                    <span/>
+                    <span>O</span>
+                    <span>v</span>
+                    <span>e</span>
+                    <span>r</span>
+                </div>
+                <button onClick={onRestart}>Try agin</button>
+            </div>)
     }
 }
 

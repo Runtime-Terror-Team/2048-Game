@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
-*{
+$back-color: #F2E1C2;
+$header-font-color: #F25C69;
+$root-font-color:#F2B33D;
+$cell-color: #448199;
+
+* {
   font-family: 'Chewy', cursive;
+  color: $root-font-color;
 
 }
+
 body {
   display: flex;
-  background-color: #57407c;
+  background-color: $back-color;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  //font-family: "Clear Sans", sans-serif;
   font-size: 21px;
 
 }
@@ -28,7 +34,7 @@ body {
   width: 440px;
   height: 440px;
   padding: 5px;
-  background-color: #57407c;
+  background-color: rgba(98, 0, 255, .16);
   border-radius: 7px;
   outline: none;
   position: relative;
@@ -47,29 +53,32 @@ body {
   justify-content: space-between;
 
   h1 {
+    color: $header-font-color;
     font-size: 4rem;
     padding: 0;
     margin: 0;
     width: 50%;
-    color: rgba(255, 255, 255, 0.5);
   }
 }
 
 .resetButton {
   background-color: #3d2963;
-  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   font-size: 25px;
   padding: 10px 20px;
   border-radius: 7px;
   text-align: center;
+  margin-bottom: 10px;
   margin-left: 63%;
   width: 27%;
+  color: gold;
   transition: color 0.3s ease, background-color 0.3s ease;
 
   &:hover {
     background-color: #d3386a;
     color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    transition: all .09s ease-out;
   }
 }
 
@@ -81,11 +90,22 @@ body {
   background-color: #3d2963;
   color: rgba(255, 255, 255, 0.5);
   min-width: 50px;
-  //width: 70px;
   padding: 5px 15px;
   border-radius: 7px;
-  width: 35%;
   margin-left: 10px;
+
+}
+
+.points{
+  color: white;
+}
+
+.score {
+  width: 25%;
+}
+
+.highest-scroe {
+  width: 35%;
 }
 
 .cell,
@@ -100,9 +120,8 @@ body {
   text-align: center;
   vertical-align: middle;
   border-radius: 7px;
-  font-family: "Clear Sans", serif;
-  color: #766;
-  background-color: #3d2963;
+  color: #ffffff;
+  background-color: $cell-color;
 }
 
 .tile0 {
@@ -110,55 +129,45 @@ body {
 }
 
 .tile2 {
-  background-color: #eee;
-  background-image: url('../assets/img/2.gif');
+  background-color: #41C9B8;
 }
 
 .tile4 {
-  background-color: #eec;
-  background-image: url(../assets/img/4.gif);
+  background-color: #00B2A1;
 }
 
 .tile8 {
-  color: #ffe;
-  background-image: url(../assets/img/8.gif);
+  background-color: #ED5471;
 }
 
 .tile16 {
-  color: #ffe;
-  background-image: url(../assets/img/16.gif);
+  background-color: #E73C75;
 }
 
 .tile32 {
-  color: #ffe;
-  background-image: url(../assets/img/32.gif);
+  background-color: #B81C64;
 }
 
 .tile64 {
-  color: #ffe;
-  background-image: url(../assets/img/64.gif);
+  background-color: #9E005D;
 }
 
 .tile128 {
-  color: #ffe;
-  background-image: url(../assets/img/128.gif);
+  background-color: #FFB33C;
 }
 
 .tile256 {
-  color: #ffe;
-  background-image: url(../assets/img/256.gif);
+  background-color: #F68530;
   font-size: 45px;
 }
 
 .tile512 {
-  color: #ffe;
-  background-image: url(../assets/img/512.gif);
+  background-color: #E85938;
   font-size: 45px;
 }
 
 .tile1024 {
-  color: #fff;
-  background-image: url(../assets/img/1024.gif);
+  background-color: #57407C;
   font-size: 35px;
 }
 
@@ -175,15 +184,11 @@ body {
   font-size: 35px;
 }
 
-.try-again {
-  z-index: 10;
-  height: 100px;
-  width: 100px;
-  background-image: url(../assets/img/try-again.gif);
-}
-
 .tile {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tile.merged {
@@ -241,13 +246,11 @@ body {
 }
 
 .gameOver {
-  //background-size: contain;
-  //background-image: url(../assets/img/game-over.gif);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: absolute;
+  padding-top: 30%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -256,48 +259,20 @@ body {
   text-align: center;
   background: rgba(87, 64, 124, .51);
 
-  h1 {
-    font-size: 4.5rem;
-    color: red;
-    word-spacing: 3px;
-    animation: light 4s ease-in-out infinite;
-    margin-bottom: 30px;
-  }
-
   button {
     padding: 5px 10px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: gold;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    animation: try-again-btn 2s ease-in-out infinite;
-    background-color: rgba(65, 105, 225, 0.26);
-  }
-}
-
-@keyframes light {
-  0% {
-    text-shadow: 0 0 1px rgba(11, 8, 255, 0);
-  }
-  50% {
-    text-shadow: 0 0 40px rgba(11, 8, 255, .5);
-  }
-  100% {
-    text-shadow: 0 0 1px rgb(11, 8, 255);
-  }
-}
-
-@keyframes try-again-btn {
-  0% {
-    transform: scale(0.8);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0.8);
+    background-color: rgba(65, 105, 225, 0.7);
+    &:hover{
+      transform: scale(1.1);
+      background-color: rgba(65, 105, 225, 1);
+      transition: all .09s ease-in;
+    }
   }
 }
 
@@ -310,7 +285,7 @@ body {
   z-index: 1;
   top: 0;
   left: 50%;
-  font-size: 1.8rem;
+  font-size: 3rem;
   animation: move-up 600ms ease-in 1;
   animation-fill-mode: both;
 }
@@ -324,5 +299,75 @@ body {
     top: -50px;
     opacity: 0;
   }
+}
 
+.logo.is-animetion {
+  margin-top: 0.6em;
+}
+
+.logo.is-animetion span {
+  display: inline-block;
+  width: 48px;
+  animation: wave-text 1s ease-in-out infinite;
+  font-size: 6rem;
+}
+
+.logo.is-animetion {
+  span:nth-of-type(1) {
+    color: #41C9B8;
+    animation-delay: 0.0s;
+  }
+
+  span:nth-of-type(2) {
+    color: #00B2A1;
+    animation-delay: 0.1s;
+  }
+
+  span:nth-of-type(3) {
+    color: #ED5471;
+    animation-delay: 0.2s;
+  }
+
+  span:nth-of-type(4) {
+    color: #ED5471;
+    animation-delay: 0.3s;
+  }
+
+  span:nth-of-type(5) {
+    color: #00B2A1;
+    animation-delay: 0.4s;
+  }
+
+  span:nth-of-type(6) {
+    color: #B81C64;
+    animation-delay: 0.3s;
+  }
+
+  span:nth-of-type(7) {
+    color: #FFB33C;
+    animation-delay: 0.2s;
+  }
+
+  span:nth-of-type(8) {
+    color: #F68530;
+    animation-delay: 0.1s;
+  }
+
+  span:nth-of-type(9) {
+    color: #E85938;
+    animation-delay: 0.0s;
+  }
+
+}
+
+@keyframes wave-text {
+  00% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
