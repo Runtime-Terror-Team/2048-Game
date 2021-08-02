@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import BoardView from "../components/Board";
 import HowToPlayPopup from "../components/HowToPlayPopup";
 
 function GamePage() {
     const [popUpHowTo, setPopUpHowTo] = useState(false)
+
+    useEffect(()=>{
+        if(localStorage.getItem("popUp")){
+            setPopUpHowTo(!JSON.parse(localStorage.getItem("popUp")))
+        }else {
+            setPopUpHowTo(true)
+        }
+    },[])
 
     return (
         <>

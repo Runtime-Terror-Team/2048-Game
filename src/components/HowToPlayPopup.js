@@ -9,7 +9,10 @@ function HowToPlayPopup({setPopup,popUp}) {
             <div>
                 <img src={Arror} alt=""/>
             </div>
-            <div className='close-btn' onClick={()=>{setPopup(!popUp)}}>X</div>
+            <div className='close-btn' onClick={()=>{
+                localStorage.setItem("popUp", JSON.stringify(true))
+                setPopup(!popUp)
+            }}>X</div>
         </div>
     );
 }
