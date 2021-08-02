@@ -1,0 +1,27 @@
+.idea-icon {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .tooltiptext {
+    visibility: hidden;
+    user-select: none;
+  }
+  svg {
+    width: 50px;
+
+    &:hover {
+      fill: #9E005D;
+      transform: scale(1.1);
+      transition: all 0.07s ease-in-out;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}

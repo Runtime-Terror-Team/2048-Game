@@ -89,6 +89,7 @@ function BoardView() {
 
     return (
         <div>
+
             <div className="details-box">
 
                     <h1>2048</h1>
