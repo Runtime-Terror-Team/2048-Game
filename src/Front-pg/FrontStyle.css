@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.6em;
+  }
+  h2,
+  h4,
+  h1 {
+    color: white;
+  }
+  
+  h1 {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://media.giphy.com/media/jaOXKCxtBPLieRLI0c/giphy.gif");
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+  
+  }
+  
+  button {
+    margin: 8px;
+      height: 60px;
+      width: 145px;
+      border-radius: 20px;
+      color: white;
+      font-size: 35px;
+      margin-top: 75px;
+      border-right: 0px;
+      background-color: #3957ff40;
+      border-left: 0px;
+      box-shadow: 0px 3px 9px 1px white;
+      font-family: 'Indie Flower', cursive;
+  }
+  
+  button:hover {
+    background-color: rgba(60, 111, 250, 0.363);
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 4px 9px 2px white;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+  }
+  
+  .container {
+    text-align: center;
+    width: 50%;
+    border: 2px solid black;
+    margin-top: 80px;
+    background-color: rgba(41, 18, 250, 0.24);
+    border-radius: 50px;
+    font-size: 150%;
+    font-family: 'Indie Flower', cursive;
+  
+  }
+  
+  .image{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  .ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5em;
+  }
+  .ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0; 
+  }
