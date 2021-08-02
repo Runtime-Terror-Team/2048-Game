@@ -1,37 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .TipsTricks {
-  max-width: 550px;
-  header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid #827254;
-
-    button{
-      font-size: 2rem;
-      background-color: #3d2963;
-      color: gold;
-      border: none;
-      padding: 5px 15px;
-      border-radius: 5px;
-      transition: color 0.3s ease, background-color 0.3s ease;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #d3386a;
-        color: rgba(255, 255, 255, 1);
-        transform: scale(1.1);
-        transition: all .09s ease-out;
-      }
-
-    }
-  }
+  max-width:450px;
+  position: absolute;
+  top: 0;
+  background: #F2E1C2;
+  animation: popup 0.3s ease forwards;
+  z-index: 10;
 
   h1 {
     color: #827254;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #827254;
   }
 
   h3 {
@@ -41,5 +32,40 @@
   .section p {
     color: #827254;
     font-family: 'Roboto', sans-serif;
+  }
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.TipsTricks-close-btn{
+  display: inline-block;
+  position: absolute;
+  top: 2%;
+  right: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover{
+    color: #9E005D;
+  }
+}
+
+.TipsTricks-back-btn{
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 40px;
+  float: right;
+  &:hover{
+    color: #9E005D;
   }
 }
