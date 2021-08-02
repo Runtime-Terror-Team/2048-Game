@@ -1,0 +1,30 @@
+.howtoplay-btn {
+  position: absolute;
+  right: 90%;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  .tooltiptext {
+    visibility: hidden;
+    user-select: none;
+    margin-top: 10px;
+  }
+
+  svg {
+    width: 40px;
+
+    &:hover {
+      fill: #9E005D;
+      transform: scale(1.1);
+      transition: all 0.07s ease-in-out;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}
