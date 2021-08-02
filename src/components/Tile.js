@@ -29,7 +29,7 @@ function Tile({ tile }) {
     }
     let classes = classArray.join(" ")
     return (
-        <span className={classes}/>
+        <span className={classes}>{tile.value}</span>
     );
 }
 

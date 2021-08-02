@@ -7,7 +7,7 @@ import GameOverlay from "./GameOverlay";
 
 function BoardView() {
     // for store board and update board
-    const [board, setBoard] = useState(new Board())
+    let [board, setBoard] = useState(new Board())
 
     // for store highScore and update highScore
     const [highScroe, setHighScore] = useState(board.score)
@@ -15,9 +15,8 @@ function BoardView() {
 
     // initially check have any local HighScore
     useEffect(() => {
-        if (localStorage.getItem('HighScore')) {
+        if (localStorage.getItem('HighScore'))
             setHighScore(JSON.parse(localStorage.getItem('HighScore')))
-        }
     }, [])
 
     // check the current score with highScore
@@ -93,16 +92,16 @@ function BoardView() {
             <div className="details-box">
 
                     <h1>2048</h1>
-                    <div className='score-box'>
-                        <div className='score-header'>Score</div>
-                        <div>{board.score}</div>
+                    <div className='score-box score'>
+                        <div className='score-header '>Score</div>
+                        <div className='points'>{board.score}</div>
                         {toggle
-                        && <div className="score-addition">+{board.score - board.preScore}</div>
+                        && <div className="score-addition points">+{board.score - board.preScore}</div>
                         }
                     </div>
-                    <div className='score-box'>
-                        <div className='score-header'>Highest Score</div>
-                        <div>{highScroe}</div>
+                    <div className='score-box highest-scroe'>
+                        <div className='score-header '>Highest Score</div>
+                        <div className='points'>{highScroe}</div>
 
                 </div>
             </div>
