@@ -33,7 +33,7 @@ function GamePage() {
                 <span className="tooltiptext">Tips&Tricks</span>
             </div>
             <BoardView/>
-            {!popUpHowTo && <>
+            {popUpHowTo && <>
                 <div className='popup-background'/>
                 <HowToPlayPopup popUp={popUpHowTo} setPopup={setPopUpHowTo}/></>}
         </>
