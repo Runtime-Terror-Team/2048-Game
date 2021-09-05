@@ -29,22 +29,21 @@ A Popular Online 2048-Game. It is a Single-Player Sliding Tile Puzzle Game.
   <tr>
       <p align="center" >
           <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-        <img align="center" src="./readme/gameplay.gif" alt="Basic composition: square and circle" />
-        <h4 align="center">Game Page</h4>
-        </a>
+              <img align="center" src="./readme/gameplay.gif" alt="Basic composition: square and circle" />
+              <h4 align="center">Game Page</h4>
+          </a>
       </p>
-      
   </tr>
   <tr>
     <td>
       <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-        <img src="./readme/game_complete.gif" alt="Basic composition: square and circle" />
+        <img src="./readme/game_complete.gif" alt="GameCompelete Popup" />
         <h4 align="center">GameCompelete Popup</h4>
       </a>
     </td>
     <td>
     <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-        <img src="readme/game_over.gif" alt="" />
+        <img src="readme/game_over.gif" alt="GameOver Popup" />
         <h4 align="center">GameOver Popup</h4>
       </a>
     </td>
@@ -52,13 +51,13 @@ A Popular Online 2048-Game. It is a Single-Player Sliding Tile Puzzle Game.
   <tr>
     <td width="50%">
       <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-        <img src="./readme/howtoplay.png" alt="Basic composition: square and circle" />
+        <img src="./readme/howtoplay.png" alt="How to Play Popup" />
         <h4 align="center">How to Play Popup</h4>
       </a>
     </td>
     <td>
         <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-          <img src="readme/tips_tricks.gif" alt="Component with responsive props" />
+          <img src="readme/tips_tricks.gif" alt="Tips and Tricks Popup" />
           <h4 align="center">Tips and Tricks Popup</h4>
       </a>
     </td>
