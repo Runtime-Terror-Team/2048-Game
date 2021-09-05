@@ -79,11 +79,18 @@ function BoardView() {
     }
     const [toggle, setToggle] = useState(false)
 
+    // handle intial score addition to none
+    const [count, setCount] = useState(0)
+
     useEffect(() => {
-        setToggle(true)
-        setTimeout(() => {
-            setToggle(false)
-        }, 600)
+        if (count !== 0) {
+            setToggle(true)
+            setTimeout(() => {
+                setToggle(false)
+            }, 600)
+        } else {
+            setCount(1)
+        }
 
     }, [board.score])
 
@@ -92,17 +99,17 @@ function BoardView() {
 
             <div className="details-box">
 
-                    <h1>2048</h1>
-                    <div className='score-box score'>
-                        <div className='score-header '>Score</div>
-                        <div className='points'>{board.score}</div>
-                        {toggle
-                        && <div className="score-addition points">+{board.score - board.preScore}</div>
-                        }
-                    </div>
-                    <div className='score-box highest-scroe'>
-                        <div className='score-header '>Highest Score</div>
-                        <div className='points'>{highScroe}</div>
+                <h1>2048</h1>
+                <div className='score-box score'>
+                    <div className='score-header '>Score</div>
+                    <div className='points'>{board.score}</div>
+                    {toggle
+                    && <div className="score-addition points">+{board.score - board.preScore}</div>
+                    }
+                </div>
+                <div className='score-box highest-scroe'>
+                    <div className='score-header '>Highest Score</div>
+                    <div className='points'>{highScroe}</div>
 
                 </div>
             </div>
