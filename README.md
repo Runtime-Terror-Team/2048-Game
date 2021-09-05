@@ -128,7 +128,7 @@ contributions you make are **greatly appreciated**.
 
 ## Acknowledgements
 
-- [All Contributors](#thank-yo)
+- [All Contributors](##special-thanks-to)
 - [InspireBy](https://play2048.co/)
 - [GameLogic](https://www.youtube.com/watch?v=ca0BEH2bBLs)
 - [Choose an Open Source License](https://choosealicense.com)
