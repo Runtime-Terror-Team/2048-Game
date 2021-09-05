@@ -27,10 +27,13 @@ A Popular Online 2048-Game. It is a Single-Player Sliding Tile Puzzle Game.
 
 <table border="0" align="center">
   <tr>
-      <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
-        <img src="./readme/gameplay.gif" alt="Basic composition: square and circle" />
+      <p align="center" >
+          <a href="https://runtime-terror-team.github.io/2048-Game" target="_blank">
+        <img align="center" src="./readme/gameplay.gif" alt="Basic composition: square and circle" />
         <h4 align="center">Game Page</h4>
         </a>
+      </p>
+      
   </tr>
   <tr>
     <td>
