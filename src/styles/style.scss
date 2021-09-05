@@ -19,7 +19,12 @@ body {
   align-content: center;
   align-items: center;
   font-size: 21px;
-
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .text {
