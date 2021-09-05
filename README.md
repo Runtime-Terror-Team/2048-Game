@@ -12,10 +12,10 @@
         - [Extra Features](#extra-features)
     - [Built With](#built-with)
     - [Contributing](#contributing)
+        - [Thank To](#thank-to)
+        - [How To](#how-to)
     - [License](#license)
     - [Acknowledgements](#acknowledgements)
-        - [Contributes](#contributes)
-        - [Resource](#resource)
 
 <!-- ABOUT THE PROJECT -->
 
@@ -100,6 +100,14 @@ A Popular Online 2048-Game. It is a Single-Player Sliding Tile Puzzle Game.
 
 [![Contributors][contributors-shield]][contributors-url]
 
+### Thank To
+
+* [Bivas](https://github.com/Bivas-Biswas)
+* [Maseera](https://github.com/MaseeraAhmed)
+* [Soumyak](https://github.com/Soumyak10)
+* [Narendra](https://github.com/geeknarendra)
+
+### How To
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
@@ -109,6 +117,7 @@ contributions you make are **greatly appreciated**.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
 <!-- LICENSE -->
 
 ## License
@@ -117,13 +126,7 @@ contributions you make are **greatly appreciated**.
 
 ## Acknowledgements
 
-### Contributes
-* [Bivas](https://github.com/Bivas-Biswas)
-* [Maseera](https://github.com/MaseeraAhmed)
-* [Soumyak](https://github.com/Soumyak10)
-* [Narendra](https://github.com/geeknarendra)
-
-### Resource
+- [All Contributors](#thank-yo)
 - [InspireBy](https://play2048.co/)
 - [GameLogic](https://www.youtube.com/watch?v=ca0BEH2bBLs)
 - [Choose an Open Source License](https://choosealicense.com)
