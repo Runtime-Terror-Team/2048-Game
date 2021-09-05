@@ -124,7 +124,7 @@ contributions you make are **greatly appreciated**.
 * [Soumyak](https://github.com/Soumyak10)
 * [Narendra](https://github.com/geeknarendra)
 
-### Resource :
+### Resource
 - [InspireBy](https://play2048.co/)
 - [GameLogic](https://www.youtube.com/watch?v=ca0BEH2bBLs)
 - [Choose an Open Source License](https://choosealicense.com)
@@ -133,8 +133,6 @@ contributions you make are **greatly appreciated**.
 - [Img Shields](https://shields.io)
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
 [contributors-shield]: https://img.shields.io/github/contributors/Runtime-Terror-Team/2048-Game.svg?style=for-the-badge
 
 [contributors-url]: https://github.com/Runtime-Terror-Team/2048-Game/graphs/contributors
