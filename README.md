@@ -12,7 +12,7 @@
         - [Extra Features](#extra-features)
     - [Built With](#built-with)
     - [Contributing](#contributing)
-        - [Thank To](#thank-to)
+        - [Special Thanks To](#special-thanks-to)
         - [How To](#how-to)
     - [License](#license)
     - [Acknowledgements](#acknowledgements)
@@ -100,7 +100,7 @@ A Popular Online 2048-Game. It is a Single-Player Sliding Tile Puzzle Game.
 
 [![Contributors][contributors-shield]][contributors-url]
 
-### Thank To
+### Special Thanks To
 
 * [Bivas](https://github.com/Bivas-Biswas)
 * [Maseera](https://github.com/MaseeraAhmed)
